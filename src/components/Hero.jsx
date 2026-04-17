@@ -189,6 +189,8 @@ const Hero = () => {
                   alt="Gowtham Portrait"
                   className="w-full h-full object-cover"
                   style={{ transition: 'transform 1s ease' }}
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Subtle Gradient Overlay on Image */}

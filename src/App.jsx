@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+// Lazy load sections below the fold for better performance
+const About = React.lazy(() => import('./components/About'));
+const Skills = React.lazy(() => import('./components/Skills'));
+const Projects = React.lazy(() => import('./components/Projects'));
+const Contact = React.lazy(() => import('./components/Contact'));
 
 function App() {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -34,10 +36,12 @@ function App() {
       
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <React.Suspense fallback={<div className="h-20 bg-slate-950" />}>
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </React.Suspense>
       </main>
 
       <Footer />
