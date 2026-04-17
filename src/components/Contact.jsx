@@ -147,7 +147,7 @@ const Contact = () => {
           }}
         >
           {/* LEFT: Contact Info */}
-          <div style={{ flex: '1 1 350px', padding: '3.5rem', background: 'rgba(255,255,255,0.02)', borderRight: '1px solid rgba(255,255,255,0.05)', position: 'relative', boxSizing: 'border-box' }}>
+          <div style={{ flex: '1 1 350px', padding: '1rem', paddingTop: '3rem', background: 'rgba(255,255,255,0.02)', borderRight: '1px solid rgba(255,255,255,0.05)', position: 'relative', boxSizing: 'border-box' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '2px', background: 'linear-gradient(90deg, transparent, #00f0ff, transparent)', opacity: 0.5 }} />
 
             <h3 className="text-white mb-8" style={{ fontSize: '1.875rem', fontWeight: 700, marginBottom: '2rem', boxSizing: 'border-box' }}>Contact Information</h3>

@@ -210,7 +210,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="scroll-indicator">
+      <div className="scroll-indicator hidden lg:flex">
         <span>Scroll</span>
         <div className="mouse-icon">
           <div className="mouse-wheel"></div>
