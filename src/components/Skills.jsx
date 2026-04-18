@@ -7,9 +7,17 @@ import {
   FaCss3Alt, 
   FaReact, 
   FaGitAlt, 
-  FaGithub 
+  FaGithub,
+  FaNodeJs
 } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
+import { 
+  SiMongodb, 
+  SiExpress, 
+  SiTailwindcss, 
+  SiPostgresql,
+  SiFlask
+} from 'react-icons/si';
 
 const skillCategories = [
   {
@@ -20,11 +28,27 @@ const skillCategories = [
     ]
   },
   {
-    title: "Web Development",
+    title: "Frontend Development",
     skills: [
       { name: "HTML", icon: FaHtml5, color: "#E34F26" },
       { name: "CSS", icon: FaCss3Alt, color: "#1572B6" },
       { name: "React.js", icon: FaReact, color: "#61DAFB" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+    ]
+  },
+  {
+    title: "Backend Development",
+    skills: [
+      { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+      { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+      { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
+    ]
+  },
+  {
+    title: "Databases",
+    skills: [
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "SQL", icon: SiPostgresql, color: "#4169E1" },
     ]
   },
   {
