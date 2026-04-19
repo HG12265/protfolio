@@ -92,8 +92,8 @@ const projects = [
       { label: "SQLite", icon: Database },
       { label: "Bootstrap", icon: Layers },
     ],
-    github: "https://github.com/HG12265/admission-portal.git",
-    live: "https://admission-portal-project.onrender.com",
+    github: "https://github.com/HG12265/online-admission-portal.git",
+    live: "https://online-admission-portal.onrender.com",
     accentColor: "#f59e0b",
   },
   {

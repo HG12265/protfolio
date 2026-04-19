@@ -1,20 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FaPython, 
-  FaJs, 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaReact, 
-  FaGitAlt, 
+import {
+  FaPython,
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaGitAlt,
   FaGithub,
   FaNodeJs
 } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
-import { 
-  SiMongodb, 
-  SiExpress, 
-  SiTailwindcss, 
+import {
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
   SiPostgresql,
   SiFlask
 } from 'react-icons/si';
@@ -82,7 +82,7 @@ const Skills = () => {
   return (
     <section id="skills" className="relative py-32 overflow-hidden">
       {/* Professional Bridge from About to Skills */}
-      <motion.div 
+      <motion.div
         initial={{ width: 0, opacity: 0 }}
         whileInView={{ width: "100%", opacity: 1 }}
         viewport={{ once: true }}
@@ -113,32 +113,47 @@ const Skills = () => {
             My <span className="gradient-text">Skills</span>
           </h2>
 
-          {skillCategories.map((category, catIndex) => (
-            <div key={catIndex} className="mb-16">
-              <h3 className="section-subtitle">{category.title}</h3>
-              
+          <div className="skills-catalog">
+            {skillCategories.map((category, catIndex) => (
               <motion.div 
-                className="skills-grid"
-                initial="hidden"
-                whileInView="visible"
+                key={catIndex} 
+                className="catalog-row"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                variants={{
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.1
-                    }
-                  }
-                }}
+                transition={{ duration: 0.6, delay: catIndex * 0.1 }}
               >
-                {category.skills.map((skill, skillIndex) => (
-                  <SkillCard 
-                    key={skillIndex} 
-                    {...skill} 
-                  />
-                ))}
+                <div className="catalog-header">
+                  <div className="catalog-index">0{catIndex + 1}</div>
+                  <div className="catalog-title-box">
+                    <h3 className="catalog-title">{category.title}</h3>
+                    <div className="catalog-line" />
+                  </div>
+                </div>
+                
+                <motion.div 
+                  className="catalog-skills-grid"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.05
+                      }
+                    }
+                  }}
+                >
+                  {category.skills.map((skill, skillIndex) => (
+                    <SkillCard 
+                      key={skillIndex} 
+                      {...skill} 
+                    />
+                  ))}
+                </motion.div>
               </motion.div>
-            </div>
-          ))}
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
