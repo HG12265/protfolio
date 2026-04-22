@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, X, Globe, Cpu, Database, Layers, Zap, Shield, ChevronRight } from 'lucide-react';
-import { FaReact, FaNodeJs, FaPython, FaGithub } from 'react-icons/fa';
-import { SiMongodb, SiTailwindcss, SiExpress, SiGooglegemini } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython, FaGithub, FaHtml5, FaCss3Alt, FaJs } from 'react-icons/fa';
+import { SiMongodb, SiTailwindcss, SiExpress, SiGooglegemini, SiTypescript, SiVite } from 'react-icons/si';
 
 const projects = [
   {
@@ -139,6 +139,50 @@ const projects = [
     github: "https://github.com/HG12265/Cinebook.git",
     live: "https://cinebook.onrender.com",
     accentColor: "#ec4899",
+  },
+  {
+    id: 7,
+    name: "AI Skilling",
+    nameHighlight: "Pathfinder",
+    tagline: "AI-powered vocational skilling ecosystem",
+    description: "A personalized vocational platform for India that aligns learner profiles with NSQF/NCVET standards, generating structured pathways, multi-phase learning materials, and live job discovery.",
+    highlights: [
+      "AI-generated personalized skilling pathways with Indian labor-market focus",
+      "Multi-phase learning dashboard with automated content and progress tracking",
+      "Real-time grounded job discovery with entry-level source citations",
+      "50-question multi-lingual assessment with automated certificate generation",
+    ],
+    techStack: [
+      { label: "React", icon: FaReact },
+      { label: "TypeScript", icon: SiTypescript },
+      { label: "Tailwind", icon: SiTailwindcss },
+      { label: "Gemini AI", icon: SiGooglegemini },
+    ],
+    github: "https://github.com/hg12265/learn-mate",
+    live: "https://learn-mate-platform.vercel.app",
+    accentColor: "#f97316",
+  },
+  {
+    id: 8,
+    name: "Sky",
+    nameHighlight: "Cast",
+    tagline: "Premium bilingual weather intelligence app",
+    description: "A comprehensive weather dashboard offering real-time data, hourly/7-day forecasts, AQI, interactive radar, and smart alerts in a single unified interface.",
+    highlights: [
+      "Live weather dashboard with detailed metrics (AQI, UV, visibility)",
+      "Smart rule-based alerts and clothing/activity suggestions",
+      "Interactive radar and precise city search with geocoding",
+      "Bilingual support (Tamil/English) with premium glassmorphism UX",
+    ],
+    techStack: [
+      { label: "HTML5", icon: FaHtml5 },
+      { label: "CSS3", icon: FaCss3Alt },
+      { label: "JavaScript", icon: FaJs },
+      { label: "Vite", icon: SiVite },
+    ],
+    github: "https://github.com/HG12265/weather-app.git",
+    live: "https://weather-skycast-app.vercel.app",
+    accentColor: "#0ea5e9",
   }
 ];
 
