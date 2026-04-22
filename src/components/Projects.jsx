@@ -137,7 +137,7 @@ const projects = [
       { label: "Stripe APIs", icon: Shield },
     ],
     github: "https://github.com/HG12265/Cinebook.git",
-    live: "https://cinebook.onrender.com",
+    live: "https://cinebook-klg5.onrender.com",
     accentColor: "#ec4899",
   },
   {
